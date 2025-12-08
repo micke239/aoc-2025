@@ -6,10 +6,10 @@ end
 
 function part1(input) 
     x = map(line -> let 
-        max1 = nothing
-        max2 = nothing
+        max1 = 0
+        max2 = 0
         for i in 1:(length(line)-1)
-            if (max1 === nothing || line[i] > max1)
+            if (line[i] > max1)
                 max1 = line[i]
                 max2 = line[i+1]
             elseif line[i+1] > max2 
